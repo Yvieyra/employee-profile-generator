@@ -47,13 +47,13 @@ function init() { // function to initialize application
                 },
                 {
                     type: 'input',
-                    name: 'internEmail',
-                    message: 'Provide intern email',
+                    name: 'school',
+                    message: 'What school instituation is intern attending?',
                 },
                 {
                     type: 'input',
-                    name: 'school',
-                    message: 'What school instituation is intern attending?',
+                    name: 'internEmail',
+                    message: 'Provide intern email',
                 },
             ]} else if (userChoice === 'Engineer') {[
                 {
@@ -78,6 +78,7 @@ function init() { // function to initialize application
                 },
         ]}
     }
+        switchQuestions();
         const htmlContent = generateHtml(answers); // passing answers to generate HTML function in the generateHtml.js file.
         fs.writeFile('index.html', (htmlContent), (err) => //using 'fs' module to create the README.md file, that is taking in three parameters. File path, data, and callback. 
             err ? console.log(err) : console.log('Successfully created HTML file!') //ternary operator

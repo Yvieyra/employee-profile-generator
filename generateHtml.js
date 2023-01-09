@@ -46,13 +46,13 @@ function generateHtml(answers) {
                       </h3>
                       <div class="card-body">
                           <p class="card-text">
-                              Name:
+                              Name: ${answers.engineerName}
                           </p>
                           <p>
-                              Employee ID:
+                              Employee ID: ${answers.engineerId}
                           </p>
-                          <p>Email Address: <a href="#" target="_blank">Placeholder</a></p> </br>
-                          <p>Github Profile: <a href="#" target="_blank">Placeholder</a></p>
+                          <p>Email Address: <a href="#" target="_blank">${answers.engineerEmail}</a></p> </br>
+                          <p>Github Profile: <a href="#" target="_blank">${answers.githubUrl}</a></p>
                       </div>
                   </div>
               </div>
@@ -100,15 +100,15 @@ function generateHtml(answers) {
                       </h3>
                       <div class="card-body">
                           <p class="card-text">
-                              Name:
+                              Name:${answers.internName}
                           </p>
                           <p>
-                              Employee ID:
+                              Employee ID:${answers.internId}
                           </p>
                           <p>
-                              School:
+                              School:${answers.school}
                           </p>
-                          <p>Email Address: <a href="#" target="_blank">Placeholder</a></p> </br>
+                          <p>Email Address: <a href="#" target="_blank">${answers.internEmail}</a></p> </br>
                       </div>
                   </div>
               </div>
