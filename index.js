@@ -4,6 +4,17 @@ const fs = require('fs');
 const engineerHtml = require('./lib/Engineer')
 const internHtml = require('./lib/Intern')
 
+function nextEmployee () {
+    const employee = [{
+    type: 'list',
+    name: 'member',
+    message: 'Please select your next team member',
+    choices: ['intern', 'engineer', 'team is now complete']
+}]
+
+};
+
+
 function engineerQuestions() {
 const engineer = [{
                 type: 'input',
@@ -91,12 +102,6 @@ const questions = [
         name: 'member',
         message: 'Please select your next team member',
         choices: ['intern', 'engineer']
-    },
-    {
-        type: 'list',
-        name: 'member',
-        message: 'Please select your next team member',
-        choices: ['intern', 'engineer', 'team is now complete']
     },
 ]
 function init() { // function to initialize application 
