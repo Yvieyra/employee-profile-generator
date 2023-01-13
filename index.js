@@ -1,19 +1,24 @@
 const inquirer = require('inquirer');
 const managerHtml= require('./lib/Manager'); 
 const fs = require('fs');
-const engineerHtml = require('./lib/Engineer')
-const internHtml = require('./lib/Intern')
+const engineerHtml = require('./lib/Engineer');
+const internHtml = require('./lib/Intern');
+// const employeeHtml = require ('./lib/Employee')
 
-function nextEmployee () {
-    const employee = [{
-    type: 'list',
-    name: 'member',
-    message: 'Please select your next team member',
-    choices: ['intern', 'engineer', 'team is now complete']
-}]
-
-};
-
+// function nextEmployee () {
+//     const employee = [{
+//     type: 'list',
+//     name: 'members',
+//     message: 'Please select your next team member',
+//     choices: ['intern', 'engineer', 'team is now complete']
+// }]
+// inquirer.prompt(employee).then((answers) => { 
+//     const employeeContent = employeeHtml(answers); // passing answers to generate HTML function in the generateHtml.js file.
+//     fs.appendFile('./dist/index.html', (employeeContent), (err) => //using 'fs' module to create the HTML.md file, that is taking in three parameters. File path, data, and callback. 
+//         err ? console.log(err) : console.log('Successfully appeneded answers to HTML') //ternary operator
+//     );
+// });
+// };
 
 function engineerQuestions() {
 const engineer = [{
@@ -44,6 +49,7 @@ inquirer.prompt(engineer).then((answers) => {
     );
 });
 };
+
 
 function internQuestions() {
 const intern = [ 
